@@ -19,7 +19,7 @@ public class MailController {
     @Autowired
     private MailService mailService;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/")
     public void send(@RequestParam int amount){
         int i = 0;
         while (i < amount) {
@@ -31,9 +31,7 @@ public class MailController {
                     i = 0;
                     Thread.sleep(5000);
                 }
-            } catch (MessagingException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
+            } catch (MessagingException | InterruptedException e) {
                 e.printStackTrace();
             }
         }
