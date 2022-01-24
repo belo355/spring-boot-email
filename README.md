@@ -16,7 +16,7 @@ email.sender.password=your-pass
 email.transport.protocol=smtp
 email.smtp.auth=true
 email.smtp.starttls.enable=true
-email.debug=false aa
+email.debug=false
 email.from.address=you-mail@***.com
 
 ```
